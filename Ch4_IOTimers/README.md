@@ -5,7 +5,7 @@ This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia 
 Following along:
  * [ATtiny AVR Microcontroller Datasheet](Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf)
  * [TI MSP430x2xx User's Guide](TI_MSP430x2xx_Users_Guide_slau144k.pdf)
- * [STM32F103 Reference Manual](stmicroelectrics-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus.pdf)
+ * [STM32F103 Reference Manual](stmicroelectrics-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus.pdf) and [github repository](https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer), specifically [stm32f103x6.h](https://github.com/STMicroelectronics/cmsis_device_f1/blob/master/Include/stm32f103x6.h)
 
 
 For understanding and practicing hex and bitwise operations:
