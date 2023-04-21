@@ -15,8 +15,16 @@ In order of when they appear in the book:
 EE Basics:
  * Make: Electronics by Charles Platt is a good getting-started-with electronics book. 
  * Forest Mims books are classic, they tend to have a solution for a given problem
+ * [nand2tetris](https://www.nand2tetris.org/) : a series of lectures and projects about how to go from logic gates to software (there is a book that is part of this as well: The Elements of Computing Systems: Building a Modern Compiplesuter from First Principals )
  * [Free textbook for Electrical Engineering & Electronics](https://www.allaboutcircuits.com/textbook/)
  * [Combinational Logic Circuits using Logic Gates](https://www.electronics-tutorials.ws/combination/comb_1.html)
+ * Games:
+    * [Turing Complete](https://store.steampowered.com/app/1444480/Turing_Complete/) - logic and processor design, hidden inside a game
+    * Zachtronics’ [TIS-100](https://store.steampowered.com/app/370360/TIS100/) - logic and processor design, hidden inside a game
+    * Zachtronics’ [Shenzhen IO](https://store.steampowered.com/app/504210/SHENZHEN_IO/) - circuit level design hidden inside a game
+    * [Human Resource Machine](https://tomorrowcorporation.com/humanresourcemachine) by Tomorrow Corporation - assembly programming, in a game
+
+
 
 
 If you like what's here, please consider buying the book: _Making Embedded Systems, 2nd Ed._ by Elecia White
