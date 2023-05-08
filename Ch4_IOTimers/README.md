@@ -9,6 +9,7 @@ Following along:
    * [STM32F103 Reference Manual](stmicroelectrics-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus.pdf) and [github repository](https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer), specifically [stm32f103x6.h](https://github.com/STMicroelectronics/cmsis_device_f1/blob/master/Include/stm32f103x6.h)
  * [Timer calculations](TimerCalculations.xlsx)
  * [Timer flowchart](TimerFlowchart.md)
+ * [A Guide to Debouncing](http://www.ganssle.com/debouncing.htm) 
 
 
 For understanding and practicing hex and bitwise operations:
@@ -18,6 +19,9 @@ For understanding and practicing hex and bitwise operations:
   * For more bit twiddling hacks and seeing how you can do optimal things (usually at the cost of readability), check out [Stanford Graphics Bithacks](https://graphics.stanford.edu/~seander/bithacks.html)
 
 
+FIXME? Wokwi demo of timers?
+https://wokwi.com/projects/327332892021621331
+https://wokwi.com/projects/327213213504504402
 
 
 
