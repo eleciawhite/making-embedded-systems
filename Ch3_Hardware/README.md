@@ -25,6 +25,10 @@ EE Basics:
     * [Human Resource Machine](https://tomorrowcorporation.com/humanresourcemachine) by Tomorrow Corporation - assembly programming, in a game
 
 
+FIXME: Command console
+FIXME: Flash test
+FIXME: Error handling
+
 
 
 If you like what's here, please consider buying the book: _Making Embedded Systems, 2nd Ed._ by Elecia White

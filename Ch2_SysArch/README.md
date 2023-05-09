@@ -17,6 +17,10 @@ Some tools for creating system and block diagrams:
 FIXME: Layers and STM32
 https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer
 
+FIXME: Add a sandbox, model view controller
+FIXME: Add helicopter example drawings?
+FIXME: Logging interface
+
 
 
 If you like what's here, please consider buying the book: _Making Embedded Systems, 2nd Ed._ by Elecia White

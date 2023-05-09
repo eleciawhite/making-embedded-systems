@@ -24,5 +24,9 @@ https://wokwi.com/projects/327332892021621331
 https://wokwi.com/projects/327213213504504402
 
 
+FIXME: Button interface with debouncing
+FIXME: Dependency injuection example
+
+
 
 If you like what's here, please consider buying the book: _Making Embedded Systems, 2nd Ed._ by Elecia White

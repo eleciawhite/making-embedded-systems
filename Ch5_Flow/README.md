@@ -16,5 +16,8 @@ Following along:
 * Miro Samek of Quantum Leaps is an enthusiastic advocate for the active object pattern and good software in embedded systems. His [books and blog](https://www.state-machine.com/kb) are filled with excellent information but his [YouTube channel](https://www.youtube.com/channel/UCMGXFEew8I6gzjg3tWen4Gw) are particularly instructive as he codes the systems as he talks.
 
 
+FIXME: State machine code, stoplight controller
+FIXME: Different main loops
+
 
 If you like what's here, please consider buying the book: _Making Embedded Systems, 2nd Ed._ by Elecia White

@@ -168,7 +168,7 @@ sequenceDiagram
 sequenceDiagram
 sequenceDiagram
     box
-    participant main as main loop
+    participant main as idle task
     participant watchdog as watchdog code
     end
     box rgb(240,255,255)
@@ -195,11 +195,8 @@ sequenceDiagram
     Note over dataAvail: async
     inputTask->>inputs:read
     inputTask->>outputTask:event
-    main->>watchdog:pet
-    main->>main:sleep
     outputTask-)outputs:write
     main->>watchdog:pet
     main->>main:sleep
     Note over main: wakes after any interrupt
-
 
