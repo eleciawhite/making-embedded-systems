@@ -18,6 +18,7 @@ Following along:
 
 FIXME: State machine code, stoplight controller
 FIXME: Different main loops
+FIXME: Generate code from csv
 
 
 If you like what's here, please consider buying the book: _Making Embedded Systems, 2nd Ed._ by Elecia White

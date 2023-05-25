@@ -24,8 +24,9 @@ sequenceDiagram
     participant delay as delay code
     Note left of main: time ↓
     main->>LED: toggle
+    LED-->>main: 
     main->>+delay: delay
-    delay->>-main:done
+    delay-->>-main: time
     Note over main: repeat
 
     
@@ -38,12 +39,14 @@ sequenceDiagram
     participant outputs as output code
     Note left of main: time ↓
     main->>inputs: read
+    inputs-->>main: 
     main->>outputs: write
+    outputs-->>main: 
     main->>LED: toggle
+    LED-->>main: 
     main->>+delay: delay
-    delay-->>-main:done
+    delay-->>-main: time
     Note over main: repeat
-    
     
 %% Main 3: Timer interrupt for LED
 sequenceDiagram
@@ -58,13 +61,17 @@ sequenceDiagram
     end
     Note left of main: time ↓
     main->>inputs: read
+    inputs-->>main: 
     timer->>LED:toggle
+    LED-->>timer: 
     main->>outputs: write
+    outputs-->>main: 
     main->>watchdog:pet
+    watchdog-->>main: 
     timer->>LED:toggle
+    LED-->timer: 
     Note over main: repeat
     Note over timer,LED: asynchronous
-
 
 %% Main 4: Interrupts do everything
 sequenceDiagram
@@ -86,16 +93,22 @@ sequenceDiagram
     end
     Note left of main: time ↓
     timer-)LED:toggle
+    LED-->>timer: 
     Note over timer,LED: asynchronous
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     dataAvail-)inputs:read
+    inputs-->dataAvail: 
     Note over dataAvail,inputs: asynchronous
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     outputReady-)outputs:write
+    outputs-->>outputReady: 
     Note over outputReady,outputs: asynchronous
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     Note over main: wakes after any interrupt
 
@@ -122,17 +135,23 @@ sequenceDiagram
     timer-)main:toggle event
     Note over timer: async
     main->>LED:toggle
+    LED-->>main: 
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     dataAvail-)main:read event
     Note over dataAvail: async
     main->>inputs:read
+    inputs-->>main: 
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     outputReady-)main:write event
     Note over outputReady: async
     main->>outputs:write
+    outputs-->>main: 
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     Note over main: wakes after any interrupt
 
@@ -153,19 +172,24 @@ sequenceDiagram
     systick-)main: update clock
     main->>inputsCallback:if time, call input callback
     inputsCallback->>inputs:read
+    inputs-->>inputsCallback: 
+    inputsCallback-->>main: 
     main->>outputsCallback:if time, call output callback 
     outputsCallback->>outputs:write
+    outputs-->>outputsCallback: 
+    outputsCallback-->>main: 
     main->>LEDCallback:if time, call LED callback
     LEDCallback->>LED:toggle
+    LED-->>LEDCallback: 
+    LEDCallback-->>main: 
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     Note over main: wake at time of next scheduled task
     Note over systick: async
 
 
-
 %% Main 7: Active objects
-sequenceDiagram
 sequenceDiagram
     box
     participant main as idle task
@@ -189,14 +213,18 @@ sequenceDiagram
     timer-)LEDTask:event
     Note over timer: async
     LEDTask->>LED:toggle
+    LED-->>LEDTask: 
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     dataAvail-)inputTask:event
     Note over dataAvail: async
     inputTask->>inputs:read
+    inputs-->>inputTask: 
     inputTask->>outputTask:event
     outputTask-)outputs:write
+    outputs-->>outputTask: 
     main->>watchdog:pet
+    watchdog-->>main: 
     main->>main:sleep
     Note over main: wakes after any interrupt
-
