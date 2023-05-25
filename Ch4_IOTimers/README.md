@@ -9,7 +9,8 @@ Following along:
    * [STM32F103 Reference Manual](stmicroelectrics-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus.pdf) and [github repository](https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer), specifically [stm32f103x6.h](https://github.com/STMicroelectronics/cmsis_device_f1/blob/master/Include/stm32f103x6.h)
  * [Timer calculations](TimerCalculations.xlsx)
  * [Timer flowchart](TimerFlowchart.md)
- * [A Guide to Debouncing](http://www.ganssle.com/debouncing.htm) 
+ * [A Guide to Debouncing](http://www.ganssle.com/debouncing.htm) by Jack Ganssle. Hackaday has [code for multiple different implementations](https://hackaday.com/2010/11/09/debounce-code-one-post-to-rule-them-all/)
+
 
 
 For understanding and practicing hex and bitwise operations:
