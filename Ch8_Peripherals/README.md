@@ -13,6 +13,11 @@ Following Along:
 and associated[code](https://www.st.com/en/embedded-software/x-cube-eeprom.html)
 
 
+ * Working out all the pieces to make a display work is tough. Adafruit is an excellent resource for this. Their [Adafruit GFX documentation](https://learn.adafruit.com/adafruit-gfx-graphics-library?view=all) explains how to draw on the screen, display bitmaps, using bitmapped fonts that are compiled into the code, and adding new fonts. The library is targeted toward Arduino but the library is in C, well organized and encapsulated, and the license is permissive. See also the [Adafruit GFX Library codeon github](https://github.com/adafruit/Adafruit-GFX-Library). See also [how to create new fonts (and symbol libraries)](https://learn.adafruit.com/creating-custom-symbol-font-for-adafruit-gfx-library?view=all)
+
+
+
+
 https://os.mbed.com/docs/mbed-os/v6.16/apis/kvstore.html
 https://github.com/ARMmbed/mbed-os-example-kvstore
 
