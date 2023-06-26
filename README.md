@@ -17,9 +17,10 @@ Optimize your system to reduce cost and increase performance
 This repository is a companion to the book. While there is code in this repository, there are other resources that are critical so expect to see lots of links and some spreadsheets. 
 
 # Some Links
-Here are some of my current favorite blogs:
-  * [Wokwi](https://wokwi.com/) simulates processors in embedded systems, giving you board level control. If you aren't ready to buy a dev board, look here. Some of my sample code will be for Wokwi for use with the [ST Nucleo L031K6](https://wokwi.com/projects/new/st-nucleo-l031k6) and [Raspberry Pi Pico](https://wokwi.com/projects/new/pi-pico-w-sdk). Note that the Wokwi landing site shows all kinds of languages including Processing (Arduino), Rust, and MicroPython. You may have to dig for the C++ interfaces.
-  
+[Wokwi](https://wokwi.com/) simulates processors in embedded systems, giving you board level control. If you aren't ready to buy a dev board, look here. Some of my sample code will be for Wokwi for use with the [ST Nucleo L031K6](https://wokwi.com/projects/new/st-nucleo-l031k6) and [Raspberry Pi Pico](https://wokwi.com/projects/new/pi-pico-w-sdk). Note that the Wokwi landing site shows all kinds of languages including Processing (Arduino), Rust, and MicroPython. You may have to dig for the C++ interfaces.
+
+
+Here are some of my current favorite blogs:  
   * The [Embedded Artistry Blog and Site](https://embeddedartistry.com/first-time-here/) has a wealth of information about design, implementation, and planning. While there are pay-for classes, a great deal of the information is free. One of my favorites here is where [the author looks at old games to get practice reading code](https://embeddedartistry.com/blog/2019/05/06/programmers-lets-study-source-code-classics/).
   
   * [Memfault’s Interrupt Blog](https://interrupt.memfault.com/blog/) is a useful source of information about IoT and Cortex processors. Memfault also has a lively Slack channel, check their website for a link.
