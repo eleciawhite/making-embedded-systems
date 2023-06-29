@@ -34,7 +34,7 @@ Here are some C++ learning resources:
   
   * [Learncpp.com](http://Learncpp.com) is a free website teaching C++ programming.
 
-  * [C++ on Exercism](https://exercism.org/tracks/cpp/exercises)provides exercises you can use to practice C++.
+  * [C++ on Exercism](https://exercism.org/tracks/cpp/exercises) provides exercises you can use to practice C++.
 
 Finally, if you are looking for inspiration or a place to post your projects, [Hackaday.io](https://hackaday.io/) and [Hackster.io](https://www.hackster.io/) are sites where you can post your project, get comments, and enter contests (for hardware or cash).
 

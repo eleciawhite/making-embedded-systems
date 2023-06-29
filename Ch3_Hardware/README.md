@@ -15,7 +15,7 @@ In order of when they appear in the book:
 EE Basics:
  * Make: Electronics by Charles Platt is a good getting-started-with electronics book. 
  * Forest Mims books are classic, they tend to have a solution for a given problem
- * [nand2tetris](https://www.nand2tetris.org/) : a series of lectures and projects about how to go from logic gates to software (there is a book that is part of this as well: The Elements of Computing Systems: Building a Modern Compiplesuter from First Principals )
+ * [nand2tetris](https://www.nand2tetris.org/) : a series of lectures and projects about how to go from logic gates to software ( there is a book that is part of this as well: The Elements of Computing Systems: Building a Modern Computer from First Principles )
  * [Free textbook for Electrical Engineering & Electronics](https://www.allaboutcircuits.com/textbook/)
  * [Combinational Logic Circuits using Logic Gates](https://www.electronics-tutorials.ws/combination/comb_1.html)
  * Games:

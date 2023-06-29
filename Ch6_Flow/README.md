@@ -18,7 +18,7 @@ Timers
  * An [ST Presentation on Timers](https://www.st.com/content/ccc/resource/training/technical/product_training/group0/2d/93/74/3f/33/83/47/95/STM32F7_WDG_TIMERS_GPTIM/files/STM32F7_WDG_TIMERS_GPTIM.pdf/jcr:content/translations/en.STM32F7_WDG_TIMERS_GPTIM.pdf)
 
  PWM
- The RPi Pico’s processor is the RP2040. The RP2040 has an [extraordinarily datasheet / good user manual](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf). The PWM section is particularly good.
+ The RPi Pico’s processor is the RP2040. The RP2040 has an [extraordinary datasheet / good user manual](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf). The PWM section is particularly good.
 
 
 # Code For This Chapter
