@@ -60,6 +60,7 @@ sequenceDiagram
         participant MCU as processor core
     end 
 
+MCU->>DMA: configure source and memory
 ADC->>MCU: ADC data ready interrupt 
 activate MCU
 note right of MCU: ADC Data Ready ISR: kicks off SPI DMA transfer
