@@ -12,6 +12,9 @@ Showing my math for the timer calculation section:
   * [Timer calculations](TimerCalculations.xlsx)
   * [Timer flowchart](TimerFlowchart.md)
 
+See also [STM32 Delay Microsecond Millisecond Utility](https://deepbluembedded.com/stm32-delay-microsecond-millisecond-utility-dwt-delay-timer-delay/): a blog post about different ways to set up timer delays 
+
+
 ## Debouncing
  [A Guide to Debouncing](http://www.ganssle.com/debouncing.htm) by Jack Ganssle. Hackaday has [code for multiple different implementations](https://hackaday.com/2010/11/09/debounce-code-one-post-to-rule-them-all/)
 
