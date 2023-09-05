@@ -1,4 +1,4 @@
-# Chapter 13: Motors and Movement
+# Chapter 14: Motors and Movement
 This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia White. 
 
 Exercise is good for you.

@@ -1,10 +1,14 @@
-# Chapter 9: IoT and Networked Sensors
+# Chapter 13: Reducing Power Consumption
 This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia White. 
 
-New chapter. Expect sensors. Lots and lots of sensors.
+I need sleep.
 
 # Following Along in the Book
+
+https://interrupt.memfault.com/blog/monitoring-battery-life
+
 # Code For This Chapter
+FIXME: Good power worksheets
 
 # Final Note
 If you like what's here, please consider buying the book: [_Making Embedded Systems, 2nd Ed._](https://learning.oreilly.com/library/view/making-embedded-systems/9781098151539/) by Elecia White

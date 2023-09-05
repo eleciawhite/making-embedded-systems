@@ -1,4 +1,4 @@
-# Chapter 10: Doing More with Less
+# Chapter 11: Doing More with Less
 This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia White. 
 
 

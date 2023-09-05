@@ -1,4 +1,4 @@
-# Chapter 11: Math
+# Chapter 12: Math
 This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia White. 
 
 Math. 
