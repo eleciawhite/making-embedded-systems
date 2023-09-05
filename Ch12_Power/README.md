@@ -4,6 +4,9 @@ This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia 
 I need sleep.
 
 # Following Along in the Book
+
+https://interrupt.memfault.com/blog/monitoring-battery-life
+
 # Code For This Chapter
 FIXME: Good power worksheets
 

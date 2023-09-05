@@ -8,7 +8,7 @@ In order of when they appear in the book:
  * Slides that show the progression from [Arduino Block Diagram to Schematic to Board](ArduinoBlockDiagramToSchematics.pdf) 
  * [Ardunio Schematic](UNO-TH_Rev3e_sch.pdf) on its own was obtained from [Arduino](https://content.arduino.cc/assets/UNO-TH_Rev3e_sch.pdf)
  * [ATmega328 Datasheet](ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf) (obtained from [Microchip](https://www.microchip.com/en-us/product/ATmega328#document-table))
-  * Command and Response Example (FIXME folder) and on [Wokwi with the Raspberry Pi Pico C SDK](https://wokwi.com/projects/324879108372693587).
+  * Command and Response Example (FIXME folder) and on [Wokwi with the Raspberry Pi Pico C SDK](https://wokwi.com/projects/324879108372693587). Of course, there are ways to go well beyond this simple command interpreter including [MicroPython](https://micropython.org/) and the command line already part of the [Zephry RTOS](https://docs.zephyrproject.org/latest/services/shell/index.html).
 
 
 # Digging Deeper into Electronics

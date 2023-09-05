@@ -24,6 +24,9 @@ LCD Font and image generation:
  * Use python: [fonttools](https://fonttools.readthedocs.io/en/latest/)
  * [Dot factory](http://www.eran.io/the-dot-factory-an-lcd-font-and-image-generator/) turns images into code
  * [Segger EmWin’s Font Converter](https://www.segger.com/products/user-interface/emwin/tools/tools-overview/) is very expensive but there is a [knockoff](http://www.pixfonter.net/font-converter/for-segger-emwin.html)
+* Some I haven't tried but seem interesting
+  * [Font Builder](https://github.com/andryblack/fontbuilder) is Qt based and has open source code that shows what you need to do
+
 
 Getting fonts:
  * [Adobe Fonts](https://fonts.adobe.com/) includes the Open Hans Sans
