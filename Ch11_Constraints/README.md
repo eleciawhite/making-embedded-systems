@@ -28,24 +28,6 @@ To compare how these different implementations work (or different versions of yo
 "The First Rule of Program Optimization: Don't do it. The Second Rule of Program Optimization (for experts only!): Don't do it yet." — [Michael A. Jackson](https://en.wikipedia.org/wiki/Michael_A._Jackson_(computer_scientist))
 
 
-## Debugging Hard Faults (Arm Cortex-M)
-
-(Pointers in C / C++ video on YouTube)[https://www.youtube.com/watch?v=zuegQmMdy8M]
-
-Interrupt Blog’s [How to Debug a Hard Fault on an Arm Cortex-M MCU](https://interrupt.memfault.com/blog/cortex-m-fault-debug) is the most in depth resource
-
-Introduction to Hard Fault:
-[Debugging Hard Faults on ARM Cortex-M | MCU on Eclipse](https://mcuoneclipse.com/2012/11/24/debugging-hard-faults-on-arm-cortex-m/)
-[STM32 Hard Fault debugging](https://mcuoneclipse.com/2012/11/24/debugging-hard-faults-on-arm-cortex-m/)
-
-[FreeRTOS Debugging and diagnosing hard faults on Arm Cortex-M CPUs](https://www.freertos.org/Debugging-Hard-Faults-On-Cortex-M-Microcontrollers.html)
-
-
-Arm Documentation: [Configurable Fault Status Register - Cortex-M3](https://developer.arm.com/documentation/dui0552/a/cortex-m3-peripherals/system-control-block/configurable-fault-status-register) 
-
-[Profiling Firmware on Cortex-M](https://interrupt.memfault.com/blog/profiling-firmware-on-cortex-m) from Interrupt provides an code to create a sample Profiling with GBD and awk on a Cortex-M processor. (It also shows other profiling methods.)
-
-
 # Code For This Chapter
 
 FIXME: Script for reading gcc map files into html or some other viz

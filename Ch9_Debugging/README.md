@@ -20,9 +20,6 @@ More information about hardfaults
  * [FreeRTOS Debugging and diagnosing hard faults on Arm Cortex-M CPUs](https://www.freertos.org/Debugging-Hard-Faults-On-Cortex-M-Microcontrollers.html)
 
 
-In [Ending the Embedded Software Dark Ages: Let’s Start With Processor Fault Debugging!](https://embeddedartistry.com/blog/2021/01/11/hard-fault-debugging/), Phillip at Embedded Artistry goes through the whole process of debugging from manually walking through the hardfault to creating good handlers to making a mini-coredump for later use.
-
-
 Arm Documentation: [Configurable Fault Status Register - Cortex-M3](https://developer.arm.com/documentation/dui0552/a/cortex-m3-peripherals/system-control-block/configurable-fault-status-register) 
 
 [Profiling Firmware on Cortex-M](https://interrupt.memfault.com/blog/profiling-firmware-on-cortex-m) from Interrupt provides an code to create a sample Profiling with GBD and awk on a Cortex-M processor. (It also shows other profiling methods.)
@@ -44,7 +41,10 @@ Phillip Johnston’s [Linker-Generated Variables in Libc](https://embeddedartist
 
 # Code For This Chapter
 
-hardfault.c
+[hardfaults.c](hardfaults.c) shows the code used in the book. It was developed using an STM32 L4.
+
+[stackoverflow.c](stackoverflow.c) shows two ways to overflow the stack. See [Smashing The Stack For Fun And Profit](https://inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf): buffer vulnerabilities and why stacks and heaps are important
+
 
 # Final Note
 If you like what's here, please consider buying the book: [_Making Embedded Systems, 2nd Ed._](https://learning.oreilly.com/library/view/making-embedded-systems/9781098151539/) by Elecia White
