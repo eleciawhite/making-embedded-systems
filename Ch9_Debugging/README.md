@@ -1,4 +1,4 @@
-# Chapter XX: Debugging
+# Chapter 9: Getting Into Trouble
 This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia White. 
 
 
