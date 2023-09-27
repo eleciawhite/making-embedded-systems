@@ -11,9 +11,16 @@ Creating an **application level communication protocol** is something you'll pro
 
 **Checksums** can identify errors in communication. While there are many simple checksums, CRCs are a better way to go. The Barr Group has a [deep dive into calculating CRCs](https://barrgroup.com/Embedded-Systems/How-To/CRC-Calculation-C-Code) that includes code and examples. (The CRC series starts [here](https://barrgroup.com/tech-talks/checksums-and-crcs) if you want to see the whole derivation.)
 
+Different networking strategies are described in Elecia’s comic [Consumer Llama and the Internet of Things](https://embedded.fm/blog/llama).
+
+For one in a million problems, [here is a write](https://medium.com/fitbit-tech-blog/the-tower-of-terror-a-bug-mystery-c57f51981eff) up describing tracking down a divide-by-zero issue caused by a roller coaster. 
+
 
 
 # Code For This Chapter
+
+SimplifiedBootloaderFlow.svg
+BootloaderDiagrams.md
 
 # Final Note
 If you like what's here, please consider buying the book: [_Making Embedded Systems, 2nd Ed._](https://learning.oreilly.com/library/view/making-embedded-systems/9781098151539/) by Elecia White
