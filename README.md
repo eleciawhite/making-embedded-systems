@@ -16,6 +16,9 @@ Optimize your system to reduce cost and increase performance
 # This Repository
 This repository is a companion to the book. While there is code in this repository, there are other resources that are critical so expect to see lots of links and some spreadsheets. 
 
+FIXME: List of chapters and their short names and a description of each
+
+
 # Some Links
 [Wokwi](https://wokwi.com/) simulates processors in embedded systems, giving you board level control. If you aren't ready to buy a dev board, look here. Some of my sample code will be for Wokwi for use with the [ST Nucleo L031K6](https://wokwi.com/projects/new/st-nucleo-l031k6) and [Raspberry Pi Pico](https://wokwi.com/projects/new/pi-pico-w-sdk). Note that the Wokwi landing site shows all kinds of languages including Processing (Arduino), Rust, and MicroPython. You may have to dig for the C++ interfaces.
 
@@ -25,7 +28,7 @@ Here are some of my current favorite blogs:
   
   * [Memfault’s Interrupt Blog](https://interrupt.memfault.com/blog/) is a useful source of information about IoT and Cortex processors. Memfault also has a lively Slack channel, check their website for a link.
   
-  * [Miro Samek's YouTube Channel](https://www.youtube.com/c/StateMachineCOM) shows Miro coding systems. He focuses a lot on state machines, you can find more no his Quantum Leaps site at [state-machine.com](https://www.state-machine.com/). 
+  * [Miro Samek's YouTube Channel](https://www.youtube.com/c/StateMachineCOM) shows Miro coding systems. He focuses a lot on state machines, you can find more on his Quantum Leaps site at [state-machine.com](https://www.state-machine.com/). 
   
   * The [Embedded Software Engineering 101](https://embedded.fm/blog/ese101) blog series by Chris Svec shows getting started from a lower level system using an MSP430.
 

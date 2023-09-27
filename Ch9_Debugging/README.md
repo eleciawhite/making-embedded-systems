@@ -34,10 +34,8 @@ Phillip Johnston’s [Linker-Generated Variables in Libc](https://embeddedartist
 
 
 ## Memory
-
-[Pointers in C / C++ video on YouTube](https://www.youtube.com/watch?v=zuegQmMdy8M)
-
-
+Extended and excellent video instruction on [Memory and Pointers in C / C++](https://www.youtube.com/watch?v=zuegQmMdy8M)
+    
 
 # Code For This Chapter
 
