@@ -10,7 +10,6 @@ In order of when they appear in the book:
  * [ATmega328 Datasheet](ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf) (obtained from [Microchip](https://www.microchip.com/en-us/product/ATmega328#document-table))
   * Command and Response Example (FIXME folder) and on [Wokwi with the Raspberry Pi Pico C SDK](https://wokwi.com/projects/324879108372693587). Of course, there are ways to go well beyond this simple command interpreter including [MicroPython](https://micropython.org/) and the command line already part of the [Zephry RTOS](https://docs.zephyrproject.org/latest/services/shell/index.html).
 
-
 # Digging Deeper into Electronics
 EE Basics:
  * Make: Electronics by Charles Platt is a good getting-started-with electronics book. 
@@ -28,6 +27,8 @@ EE Basics:
 
 The book doesn't cover logic gates or assembly so this is all about the amusement. These games are all good for building intuition about the lowest layers of what the computer is doing. I mean, if they aren't fun, don't continue, they aren't lessons. But if they are fun and you progress through the levels, you'll learn more about the lower levels of processors and how they work which will look familiar if you work with them. 
 
+## MicroMadness Tournament
+If you want to get a broad overview of a bunch of different boards, look at the [MicroMadness Spreadsheet](MicroMadnessTournament.xlsx). Find 32 (or 16) friends/classmates. Randomly assign dev boards. Go off and look up some basic information about the dev board. Then have the boards compete based on the arbitrary (and randomly chosen) criteria. The winner gets bragging rights. 
 
 # Code For This Chapter
   * Command and Response Example (FIXME folder) and on [Wokwi with the Raspberry Pi Pico C SDK](https://wokwi.com/projects/324879108372693587).
