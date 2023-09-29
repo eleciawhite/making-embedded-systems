@@ -28,7 +28,9 @@ EE Basics:
 The book doesn't cover logic gates or assembly so this is all about the amusement. These games are all good for building intuition about the lowest layers of what the computer is doing. I mean, if they aren't fun, don't continue, they aren't lessons. But if they are fun and you progress through the levels, you'll learn more about the lower levels of processors and how they work which will look familiar if you work with them. 
 
 ## MicroMadness Tournament
-If you want to get a broad overview of a bunch of different boards, look at the [MicroMadness Spreadsheet](MicroMadnessTournament.xlsx). Find 32 (or 16) friends/classmates. Randomly assign dev boards. Go off and look up some basic information about the dev board. Then have the boards compete based on the arbitrary (and randomly chosen) criteria. The winner gets bragging rights. 
+If you want to get a broad overview of a bunch of different boards, look at the [MicroMadness Spreadsheet](MicroMadnessTournament.xlsx). Find 32 (or 16) friends/classmates. Randomly assign dev boards. Go off and look up some basic information about the dev board. Then have the boards compete based on the arbitrary (and randomly chosen) criteria. When a board loses a round, the "owner" becomes part of the winning team to help look up data. 
+
+The winner (and their newly formed team) gets bragging rights. 
 
 # Code For This Chapter
   * Command and Response Example (FIXME folder) and on [Wokwi with the Raspberry Pi Pico C SDK](https://wokwi.com/projects/324879108372693587).
