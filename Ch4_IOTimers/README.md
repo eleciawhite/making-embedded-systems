@@ -21,8 +21,8 @@ See also [STM32 Delay Microsecond Millisecond Utility](https://deepbluembedded.c
 ## Hex and Bits
 For understanding and practicing hex and bitwise operations:
   * [YouTube: Bit Hacks from Beginner to Advanced](https://www.youtube.com/watch?v=ZRNO-ewsNcQ) is an excellent video
-  * [calc.50x.ca](https://calc.50x.ca/) provide a hex calculator showing the binary values
-  * [bitwiseCmd](https://bitwisecmd.com/) lets you try out bitwise operations
+  * [calc.50x.ca](https://calc.50x.ca/) provides a hex calculator showing the binary values
+  * [bitwiseCmd](https://bitwisecmd.com/) lets you try out bitwise operations online
   * For more bit twiddling hacks and seeing how you can do optimal things (usually at the cost of readability), check out [Stanford Graphics Bithacks](https://graphics.stanford.edu/~seander/bithacks.html)
 
 # Code For This Chapter
