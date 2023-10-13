@@ -6,6 +6,13 @@ Math.
 Don't forget python does LaTeX output
 
 # Following Along in the Book
+
+[A great explanation of Fourier Transforms (blog and video)](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/): Smoothies that go through the Fourier Transform produce recipes. 
+
+For a super awesome resource on signal processing, check out the [DSP Guide](https://dspguide.com/) aka The Scientist and Engineer's Guide to Digital Signal Processing By Steven W. Smith, Ph.D.
+
+
+
 # Code For This Chapter
 
 # Final Note
