@@ -10,7 +10,7 @@ This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia 
 
 ## Debugging Hard Faults (Arm Cortex-M)
 
-In [Ending the Embedded Software Dark Ages: Let’s Start With Processor Fault Debugging!](https://embeddedartistry.com/blog/2021/01/11/hard-fault-debugging/), Phillip at Embedded Artistry goes through the whole process of debugging from manually walking through the hardfault to creating good handlers to making a mini-core dump for later use. 
+In [Ending the Embedded Software Dark Ages: Let’s Start With Processor Fault Debugging!](https://embeddedartistry.com/blog/2021/01/11/hard-fault-debugging/), Phillip at Embedded Artistry goes through the whole process of debugging from manually walking through the hardfault to creating good handlers to making a mini-core dump for later use. He also writes about [using Memfault's services to track hard fault issues](https://embeddedartistry.com/blog/2021/01/18/is-memfault-the-future-of-fault-debugging-we-think-so/).
 
 That links to Interrupt Blog’s [How to Debug a Hard Fault on an Arm Cortex-M MCU](https://interrupt.memfault.com/blog/cortex-m-fault-debug) which is the most tactical hands-on resource.
 
@@ -25,10 +25,7 @@ Arm Documentation: [Configurable Fault Status Register - Cortex-M3](https://deve
 [Profiling Firmware on Cortex-M](https://interrupt.memfault.com/blog/profiling-firmware-on-cortex-m) from Interrupt provides an code to create a sample Profiling with GBD and awk on a Cortex-M processor. (It also shows other profiling methods.)
 
 ## Linker Files
-Here is an [excellent and through post about linker files](https://mcyoung.xyz/2021/06/01/linker-script/). I also recommend [The most thoroughly commented linker script (probably)](
-)
-
-Miguel Young de la Sota’s post about [Everything You Never Wanted to Know About Linker Script](https://mcyoung.xyz/2021/06/01/linker-script/) is an excellent post about linker files.  
+Miguel Young de la Sota’s post about [Everything You Never Wanted to Know About Linker Script](https://mcyoung.xyz/2021/06/01/linker-script/) is an excellent and thorough post about linker files.  
 Another great resource is Thea Flowers’ post on [the most thoroughly commented linker script (probably)](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/). Finally, 
 Phillip Johnston’s [Linker-Generated Variables in Libc](https://embeddedartistry.com/lesson/linker-generated-variables-in-libc/) shows how to use and set linker variables.
 
