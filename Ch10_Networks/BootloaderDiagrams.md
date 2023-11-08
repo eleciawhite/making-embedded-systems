@@ -7,8 +7,8 @@
 
 
 flowchart TD
-    start{"Is there code in aux flash?"}
-    version{"Is the code in aux flash newer?"}
+    start{"Is there code in auxiliary flash?"}
+    version{"Is the code in auxiliary flash newer?"}
     run["Run the code on the processor"]
     copy["Copy the new code to the processor"]
     reboot["Reboot"]
