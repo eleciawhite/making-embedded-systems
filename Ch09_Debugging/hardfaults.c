@@ -25,9 +25,8 @@
  */
 
 #include <stdint.h>
+#include <stdlib.h>
 #include "stm32l4xx.h"
-
-#include "hardfaults.h"
 
 
 int divide_by_zero(void)
@@ -41,7 +40,7 @@ int divide_by_zero(void)
  // uninitalized global ends up initialized to 0
 int* global_ptr_to_null = NULL;
 int* global_ptr_unitialized;
-void write_to_null(void) {
+int write_to_null(void) {
   int* ptr_to_null = NULL;
   int* ptr_unitialized;
 
@@ -52,6 +51,8 @@ void write_to_null(void) {
 
   return *global_ptr_to_null + *global_ptr_unitialized + *ptr_to_null + *ptr_unitialized;
 }
+// NOTE: You may have to set up your MPU for pointer protection
+// See: https://interrupt.memfault.com/blog/fix-bugs-and-secure-firmware-with-the-mpu#enable-memmanage-fault-handler
 
 // Assuming 0xE0000000 is a bad instruction
 int illegal_instruction_execution(void) {
@@ -72,14 +73,18 @@ void call_null_pointer_function(void)
   fun_ptr(); /* will execute code at address zero, often the reset code */
 }
 
-
+/******************************************************************************************************
+ * Returning Memory:
+ * Returning stack memory can lead to stack errors and crashes
+ * Returning free'd memory usually only leads to data errors
+*******************************************************************************************************/
 int* dont_return_stack_memory(void) {
 	int stack_memory[100];
 	return stack_memory;
 }
 
 int* dont_return_malloc_and_freed_memory(void) {
-	int memory = malloc(100);
+	int* memory = malloc(100);
 	free(memory);
 	return memory;
 }
@@ -89,13 +94,6 @@ int this_is_ok(void) {
 	int b = a+1;
 	return b;
 }
-
-// this isn't failing, how to get it to fail?
-int* ptr_to_null;     // uninitalized global ends up initialized to 0
-void write_to_rom(void) {
-  *ptr_to_null = 10; /* tries to write to address zero */
-}
-
 
 /******************************************************************************************************
 * On an STM32 Cortex-M4 smallVariable is 0xdd but this depends on your
@@ -109,7 +107,6 @@ uint8_t unaligned_access_ok(void)
 	return smallVariable;
 }
 
-
 /******************************************************************************************************
  * Unaligned access is automatically a hardfault on CM0s.
  *
@@ -120,7 +117,7 @@ uint8_t unaligned_access_ok(void)
  * On an STM32 Cortex-M4 val_BB_to_EE is 0xeeddccbb but this depends on your
  * processor and endianness.
 *******************************************************************************************************/
-uint32_t unaligned_access_bad(int index)
+ uint32_t unaligned_access_bad(int index)
 {
 	uint8_t buffer[6] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF};
 	uint8_t i = index;
@@ -137,24 +134,21 @@ uint32_t unaligned_access_bad(int index)
 
 void do_some_hardfaults(void)
 {
-//	divide_by_zero(); 			  // look at registers
-//  write_to_null();					// null and uninitialized
+	divide_by_zero(); 			  	// look at registers
+    write_to_null();				// null and uninitialized: fine with an MPU
 
-/* UNALIGNED ACCESS * /
+	illegal_instruction_execution(); // look at building a handler
+
+    call_null_pointer_function();    // look at memfault blog: https://interrupt.memfault.com/blog/cortex-m-fault-debug
+
+    /* UNALIGNED ACCESS */
 	unaligned_access_bad(1);
 	unaligned_access_ok();
 	SCB->CCR |= (1<<3);			  	// turn on the hard fault that disallows unaligned access
 	unaligned_access_ok();			// works
 	unaligned_access_bad(0);		// works
 	unaligned_access_bad(1);		// hardfault
-/**/
 
-	illegal_instruction_execution2(); // look at memfault blog
-//  call_null_pointer_function(); // look at building a handler
-
-//	write_to_rom();				//
-//	SCB->CCR |= (1<<8);
-//	write_to_rom();
 
 }
 
@@ -174,7 +168,9 @@ void do_some_hardfaults(void)
 
 
 // From https://www.freertos.org/Debugging-Hard-Faults-On-Cortex-M-Microcontrollers.html
-#ifdef NEW_HANLDER_1
+
+// #define  NEW_HANLDER_1
+#ifdef  NEW_HANLDER_1
 void HardFault_Handler(void)
 {
 	__asm volatile
@@ -219,10 +215,15 @@ void hard_fault_handler_c(unsigned long *hardfault_args){
   stacked_psr = ((unsigned long)hardfault_args[7]) ;
 
   // Configurable Fault Status Register
-  // Consists of MMSR, BFSR and UFSR
+  //	 a summary of the fault(s) which took place and resulted in the exception
+  // Contains:
+  // * UsageFault Status Register (UFSR)- faults that are not related to memory access failures
+  // * BusFault Status Register (BFSR) - faults related to instruction prefetch or memory access failures
+  // * MemManage Status Register (MMFSR) - Memory Protection Unit faults
   _CFSR = (*((volatile unsigned long *)(0xE000ED28))) ;
 
-  // Hard Fault Status Register
+  // Hard Fault Status Register - very limited, explains why a fault triggered:
+  // debug event, configured event, or vector table error
   _HFSR = (*((volatile unsigned long *)(0xE000ED2C))) ;
 
   // Debug Fault Status Register
@@ -240,19 +241,10 @@ void hard_fault_handler_c(unsigned long *hardfault_args){
 
   __asm("BKPT #0\n") ; // Break into the debugger
 }
-#endif // NEW_HANDLER2
+#endif // NEW_HANDLER_1
 
-
-#if NEW_HANDLER_MEMFAULT
-
-// NOTE: If you are using CMSIS, the registers can also be
-// accessed through CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk
-#define HALT_IF_DEBUGGING()                              \
-  do {                                                   \
-    if ((*(volatile uint32_t *)0xE000EDF0) & (1 << 0)) { \
-      __asm("bkpt 1");                                   \
-    }                                                    \
-} while (0)
+//#define NEW_HANDLER_MEMFAULT
+#ifdef NEW_HANDLER_MEMFAULT
 
 typedef struct __attribute__((packed)) ContextStateFrame {
   uint32_t r0;
@@ -272,21 +264,24 @@ typedef struct __attribute__((packed)) ContextStateFrame {
       "mrseq r0, msp \n"                         \
       "mrsne r0, psp \n"                         \
       "b my_fault_handler_c \n"                  \
-
 )
 
+void HardFault_Handler(void)
+{
+	HARDFAULT_HANDLING_ASM();
+}
 // Disable optimizations for this function so "frame" argument
 // does not get optimized away
 __attribute__((optimize("O0")))
 void my_fault_handler_c(sContextStateFrame *frame) {
   // If and only if a debugger is attached, execute a breakpoint
   // instruction so we can take a look at what triggered the fault
-  HALT_IF_DEBUGGING();
+  __asm("BKPT #0\n") ; // Break into the debugger
 
   // Logic for dealing with the exception. Typically:
   //  - log the fault which occurred for postmortem analysis
   //  - If the fault is recoverable,
-  //    - clear errors and return back to Thread Mode
+  //    - clear errors and return
   //  - else
   //    - reboot system
 }
