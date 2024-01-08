@@ -1,3 +1,5 @@
+```
+%% Mermaid diagram, put this in mermaid.live if it doesn't show
 flowchart TD
     adc["`ADC 
         4 channel 
@@ -63,7 +65,4 @@ flowchart TD
                     1728000 bytes/second`"|displayspi
     displayspi --> display  
 
-
-
-
-    
+```

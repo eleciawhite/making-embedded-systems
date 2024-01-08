@@ -1,3 +1,6 @@
+```
+%% Mermaid diagram, put this in mermaid.live if it doesn't show
+
 %%{
   init: {
     "sequence": {
@@ -38,7 +41,4 @@ deactivate A
 B->>A: ?
 deactivate B
 
-
-
-
-
+```

@@ -1,3 +1,4 @@
+```
 %% Mermaid diagram, put this in mermaid.live if it doesn't show up as a flowchart.
 
 %%{init: 
@@ -19,3 +20,4 @@ flowchart TD
     version --> |No| run
     reboot --> start
 
+```

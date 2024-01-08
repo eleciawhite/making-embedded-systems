@@ -1,3 +1,4 @@
+```
 %% Mermaid diagram, put this in mermaid.live if it doesn't show up as a decision tree.
 
 %%{init: 
@@ -30,3 +31,4 @@ flowchart TD
     MultTwoOk --> |No| Brute
     MultTwoOk --> |Yes| MultTwo
     MultTwo --> AcceptableError
+``````

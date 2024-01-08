@@ -1,3 +1,4 @@
+```
 %% Mermaid diagram, put this in mermaid.live if it doesn't show up as a decision tree.
 
 
@@ -228,3 +229,4 @@ sequenceDiagram
     watchdog-->>main: 
     main->>main:sleep
     Note over main: wakes after any interrupt
+```
