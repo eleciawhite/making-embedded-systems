@@ -1,4 +1,5 @@
-```
+# Interrupting Cow Knock-Knock Joke
+```mermaid
 %% Mermaid diagram, put this in mermaid.live if it doesn't show
 
 %%{

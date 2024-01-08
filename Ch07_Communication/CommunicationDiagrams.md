@@ -1,3 +1,6 @@
+# SPI with data ready interrupt
+```mermaid
+%% Mermaid diagram, put this in mermaid.live if it doesn't show as images
 %%{
   init: {
     "sequence": {
@@ -45,8 +48,22 @@ note over MCU: SPI TX empty ISR: no more bytes. Signal new ADC samples are ready
 deactivate MCU
 ADC->>MCU: ADC data ready interrupt 
 note over MCU: ...
-
-
+```
+# SPI with DMA
+```mermaid
+%%{
+  init: {
+    "sequence": {
+        "mirrorActors": false,
+        "diagramMarginX": 10,
+        "diagramMarginY": 10,
+        "boxTextMargin": 5,
+        "noteMargin": 10,
+        "messageMargin": 1,
+        "wrap":true,
+        "width":300
+    }}
+}%%
 
 %% SPI with DMA
 sequenceDiagram
@@ -78,3 +95,4 @@ note right of MCU: DMA complete ISR. Signal runtime new ADC samples are ready fo
 deactivate MCU
 ADC->>MCU: ADC data ready interrupt 
 note over MCU: ...
+```

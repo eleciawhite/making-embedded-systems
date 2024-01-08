@@ -1,4 +1,8 @@
-```
+
+# Different Kinds of Main Loops
+## Main 1: initial diagram
+
+```mermaid
 %% Mermaid diagram, put this in mermaid.live if it doesn't show up as a decision tree.
 
 
@@ -29,7 +33,9 @@ sequenceDiagram
     main->>+delay: delay
     delay-->>-main: time
     Note over main: repeat
-
+```
+## Main 2: with inputs and outputs
+```mermaid
     
 %% Main 2: with inputs and outputs
 sequenceDiagram
@@ -48,7 +54,9 @@ sequenceDiagram
     main->>+delay: delay
     delay-->>-main: time
     Note over main: repeat
-    
+```
+## Main 3: Timer interrupt for LED
+```mermaid   
 %% Main 3: Timer interrupt for LED
 sequenceDiagram
     participant main as main loop
@@ -73,7 +81,9 @@ sequenceDiagram
     LED-->timer: 
     Note over main: repeat
     Note over timer,LED: asynchronous
-
+```
+## Main 4: Interrupts do everything
+```mermaid
 %% Main 4: Interrupts do everything
 sequenceDiagram
     box
@@ -112,8 +122,9 @@ sequenceDiagram
     watchdog-->>main: 
     main->>main:sleep
     Note over main: wakes after any interrupt
-
-
+```
+## Main 5: Interrupts cause events
+```mermaid
 %% Main 5: Interrupts cause events
 sequenceDiagram
     box
@@ -155,7 +166,9 @@ sequenceDiagram
     watchdog-->>main: 
     main->>main:sleep
     Note over main: wakes after any interrupt
-
+```
+## Main 6: Tiny scheduler
+```mermaid
 %% Main 6: Tiny scheduler
 sequenceDiagram
     box rgb(250,240,240)
@@ -188,8 +201,9 @@ sequenceDiagram
     main->>main:sleep
     Note over main: wake at time of next scheduled task
     Note over systick: async
-
-
+```
+## Main 7: Active objects
+```mermaid
 %% Main 7: Active objects
 sequenceDiagram
     box
