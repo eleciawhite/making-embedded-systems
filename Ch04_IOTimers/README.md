@@ -3,9 +3,10 @@ This is a companion repository for _Making Embedded Systems, 2nd Ed._ by Elecia 
 
 # Following Along in the Book
  Some example processor documents, obtained from their vendors:
-   * [ATtiny AVR Microcontroller Datasheet](Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf)
-   * [TI MSP430x2xx User's Guide](TI_MSP430x2xx_Users_Guide_slau144k.pdf)
-   * [STM32F103 Reference Manual](stmicroelectrics-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus.pdf) and [github repository](https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer), specifically [stm32f103x6.h](https://github.com/STMicroelectronics/cmsis_device_f1/blob/master/Include/stm32f103x6.h)
+   * [ATtiny AVR Microcontroller Datasheet](Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf) ([remote](https://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf)) and the application note [AVR 130: Setup and Use the AVR Timers](https://ww1.microchip.com/downloads/en/Appnotes/Atmel-2505-Setup-and-Use-of-AVR-Timers_ApplicationNote_AVR130.pdf)
+   * [TI MSP430x2xx User's Guide](TI_MSP430x2xx_Users_Guide_slau144k.pdf) ([remote](https://www.ti.com/lit/ug/slau144k/slau144k.pdf))
+
+   * [STM32F103 Reference Manual](stmicroelectrics-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus.pdf) ([remote](https://www.st.com/resource/en/reference_manual/rm0008-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)) and [github repository](https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer), specifically [stm32f103x6.h](https://github.com/STMicroelectronics/cmsis_device_f1/blob/master/Include/stm32f103x6.h)
 
 ## Timer Calculations
 Showing my math for the timer calculation section:
