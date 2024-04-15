@@ -1,14 +1,10 @@
 /*
  * stackoverflow.c
- *
  * This file shows some ways to cause a stack overflow.
- * 
  */
-
 
 #include <stdio.h>
 #define MAX_NAME_LENGTH 10 // enter more characters than this to cause problems
-
 
 void unbounded_fill_from_input(char* name)
 {
