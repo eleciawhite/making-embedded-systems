@@ -7,7 +7,8 @@
 
 
 #include <stdio.h>
-#define MAX_NAME_LENGTH 10 // enter more characters than this to cause problems
+#define MAX_NAME_LENGTH 10 
+// enter more than 10 characters to cause problems
 
 
 void unbounded_fill_from_input(char* name)
@@ -21,10 +22,10 @@ void unbounded_fill_from_input(char* name)
     }
     name[i] = NULL; // NULL terminate string
 }
-void overflow_the_stack(void) 
+void trash_the_stack(void) 
 {
     char name[MAX_NAME_LENGTH];
     printf("Hello! Tell me your name: ");
     unbounded_fill_from_input(name);
-    printf("Hello %s", name);
+    printf("Hello %s\r\n", name);
 }
