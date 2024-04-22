@@ -18,28 +18,30 @@
 
 
 sequenceDiagram
-    box rgb(255,240,240)
-        participant A as me
-    end 
-    box rgb(240,255,240)
-        participant B as you
-    end 
+    participant A as Me
+    participant B as You
+autonumber
+Note left of A: time ↓
 
 activate A
-A->>B: Knock, knock
+A->>B: Knock!
+A->>B: Knock!
 deactivate A
 activate B
 B->>A: Who's there?
-activate A
 deactivate B
-A->>B: Interrupting cow
+activate A
+A->>B: Interrupting cow.
 deactivate A
+
 activate B
-B->>A: Interrupting cow wh-
+B->>A: Interrupting 
+B->>A: cow
 activate A
 A->>B: Mooooo!
 deactivate A
-B->>A: ?
+B-->>A: who?
+
 deactivate B
 
 ```

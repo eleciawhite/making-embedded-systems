@@ -31,7 +31,7 @@ sequenceDiagram
     main->>LED: toggle
     LED-->>main: 
     main->>+delay: delay
-    delay-->>-main: time
+    delay-->>-main: done
     Note over main: repeat
 ```
 ## Main 2: with inputs and outputs
@@ -52,7 +52,7 @@ sequenceDiagram
     main->>LED: toggle
     LED-->>main: 
     main->>+delay: delay
-    delay-->>-main: time
+    delay-->>-main: done
     Note over main: repeat
 ```
 ## Main 3: Timer interrupt for LED
@@ -84,21 +84,18 @@ sequenceDiagram
 ```
 ## Main 4: Interrupts do everything
 ```mermaid
-%% Main 4: Interrupts do everything
 sequenceDiagram
-    box
     participant main as main loop
     participant watchdog as watchdog code
-    end
     box rgb(250,240,240)
     participant timer as timer interrupt
     participant LED as LED code
     end
-    box rgb(250,240,240)
+    box rgb(240,250,240)
     participant dataAvail as data interrupt
     participant inputs as input code
     end
-    box rgb(250,240,240)
+    box rgb(240,240,250)
     participant outputReady as output interrupt
     participant outputs as output code
     end
@@ -125,22 +122,19 @@ sequenceDiagram
 ```
 ## Main 5: Interrupts cause events
 ```mermaid
-%% Main 5: Interrupts cause events
 sequenceDiagram
-    box
     participant main as main loop
     participant watchdog as watchdog code
     participant inputs as input code
     participant LED as LED code
     participant outputs as output code
-    end
     box rgb(250,240,240)
     participant timer as timer interrupt
     end
-    box rgb(250,240,240)
+    box rgb(240,250,240)
     participant dataAvail as data interrupt
     end
-    box rgb(250,240,240)
+    box rgb(240,240,250)
     participant outputReady as output interrupt
     end
     Note left of main: time ↓

@@ -15,40 +15,36 @@
     }}
 }%%
 
-%% SPI with data ready interrupt
-sequenceDiagram
-    box rgb(255,240,240)
-        participant ADC
-    end 
-    box rgb(240,255,240)
-        participant MCU as processor
-    end 
+note left of ADC: time ↓
+ADC->>MCU: ADC data ready interrupt 
+activate MCU
+note right of MCU: ADC Data Ready ISR:<br>kicks off SPI transfer
+deactivate MCU
+activate MCU
 
-ADC->>MCU: ADC data ready interrupt 
-activate MCU
-note over MCU: ADC Data Ready ISR: kicks off SPI transfer
+note right of MCU: SPI TX empty ISR:<br>Send TX
+MCU-->>ADC: data transfer
+ADC-->>MCU: 
 deactivate MCU
 activate MCU
-note over MCU: SPI TX empty ISR: Send TX
-MCU->>ADC: data transfer
-ADC->>MCU: 
+note right of MCU: SPI TX empty ISR:<br>Send TX
+MCU-->>ADC: data transfer
+ADC-->>MCU: 
 deactivate MCU
 activate MCU
-note over MCU: SPI TX empty ISR: Send TX
-MCU->>ADC: data transfer
-ADC->>MCU: 
+note right of MCU: SPI TX empty ISR:<br>Send TX
+MCU-->>ADC: data transfer
+ADC-->>MCU: 
 deactivate MCU
 activate MCU
-note over MCU: SPI TX empty ISR: Send TX
-MCU->>ADC: data transfer
-ADC->>MCU: 
-deactivate MCU
-activate MCU
-note over MCU: SPI TX empty ISR: no more bytes. Signal new ADC samples are ready for use.
+note right of MCU: SPI TX empty ISR:<br> No more bytes.<br>Signal new ADC <br>samples are ready for use.
 deactivate MCU
 ADC->>MCU: ADC data ready interrupt 
-note over MCU: ...
+activate MCU
+ADC->MCU:<br> 
+deactivate MCU
 ```
+
 # SPI with DMA
 ```mermaid
 %%{
@@ -67,32 +63,36 @@ note over MCU: ...
 
 %% SPI with DMA
 sequenceDiagram
-    box rgb(255,240,240)
+    box rgb(250,240,240)
         participant ADC
     end 
-    box rgb(240,240,255)
+    box rgb(240,250,240)
         participant DMA as DMA
     end 
-    box rgb(240,255,240)
-        participant MCU as processor core
+    box rgb(240,240,250)
+        participant MCU as Processor core
     end 
 
-MCU->>DMA: configure source and memory
+note left of ADC: time ↓
+MCU->>DMA: Configure source and memory
 ADC->>MCU: ADC data ready interrupt 
 activate MCU
-note right of MCU: ADC Data Ready ISR: kicks off SPI DMA transfer
+note right of MCU: ADC Data Ready ISR:<br>kicks off SPI DMA transfer
 deactivate MCU
-DMA->>ADC: data transfer
-ADC->>DMA: 
-DMA->>ADC: data transfer
-ADC->>DMA: 
-DMA->>ADC: data transfer
-ADC->>DMA: 
+DMA-->>ADC: data transfer
+ADC-->>DMA: 
+DMA-->>ADC: data transfer
+ADC-->>DMA: 
+DMA-->>ADC: data transfer
+ADC-->>DMA: 
 DMA->>MCU: DMA complete
 activate MCU
-note right of MCU: DMA complete ISR. Signal runtime new ADC samples are ready for use.
+note right of MCU: DMA complete ISR:<br>Signals runtime new ADC <br>samples are ready for use.
 
 deactivate MCU
 ADC->>MCU: ADC data ready interrupt 
-note over MCU: ...
+activate MCU
+ADC->MCU:<br> 
+deactivate MCU
+
 ```
