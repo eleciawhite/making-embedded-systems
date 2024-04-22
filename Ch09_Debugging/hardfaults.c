@@ -28,7 +28,6 @@
 #include <stdlib.h>
 #include "stm32l4xx.h"
 
-
 int divide_by_zero(void)
 {
 	int a = 1;
@@ -49,7 +48,8 @@ int write_to_null(void) {
   *ptr_to_null  = 10;           /* tries to write to address zero */
   *ptr_unitialized = 10;    		/* tries to write ?? somewhere ?? */
 
-  return *global_ptr_to_null + *global_ptr_unitialized + *ptr_to_null + *ptr_unitialized;
+  return *global_ptr_to_null + *global_ptr_unitialized + 
+          *ptr_to_null + *ptr_unitialized;
 }
 // NOTE: You may have to set up your MPU for pointer protection
 // See: https://interrupt.memfault.com/blog/fix-bugs-and-secure-firmware-with-the-mpu#enable-memmanage-fault-handler
@@ -171,6 +171,7 @@ void do_some_hardfaults(void)
 
 // #define  NEW_HANLDER_1
 #ifdef  NEW_HANLDER_1
+
 void HardFault_Handler(void)
 {
 	__asm volatile
@@ -232,7 +233,8 @@ void hard_fault_handler_c(unsigned long *hardfault_args){
   // Auxiliary Fault Status Register
   _AFSR = (*((volatile unsigned long *)(0xE000ED3C))) ;
 
-  // Read the Fault Address Registers. These may not contain valid values.
+  // Read the Fault Address Registers. These may not contain 
+  // valid values.
   // Check BFARVALID/MMARVALID to see if they are valid values
   // MemManage Fault Address Register
   _MMAR = (*((volatile unsigned long *)(0xE000ED34))) ;
@@ -243,7 +245,7 @@ void hard_fault_handler_c(unsigned long *hardfault_args){
 }
 #endif // NEW_HANDLER_1
 
-//#define NEW_HANDLER_MEMFAULT
+// #define NEW_HANDLER_MEMFAULT
 #ifdef NEW_HANDLER_MEMFAULT
 
 typedef struct __attribute__((packed)) ContextStateFrame {
@@ -270,11 +272,41 @@ void HardFault_Handler(void)
 {
 	HARDFAULT_HANDLING_ASM();
 }
+
+// Add a coredump section in RAM that will be  placed at a 
+// particular location in RAM so when we boot, 
+// we can see if there is anything useful there
+//  .CoreDump :
+//  {
+ // } > RAM2
+#define COREDUMP_KEY 0xE0C2024
+__attribute__((packed)) struct sCoreDump {
+uint32_t key; // must equal COREDUMP_KEY for this to be valid
+uint32_t cause;
+uint32_t r0;
+uint32_t r1;
+uint32_t r2;
+uint32_t r3;
+uint32_t returnAddress;
+uint32_t stackPointer;
+int32_t lastBattReading;
+} __attribute__((section(".CoreDump"))) coreDump;
+
 // Disable optimizations for this function so "frame" argument
 // does not get optimized away
 __attribute__((optimize("O0")))
-void my_fault_handler_c(sContextStateFrame *frame) {
-  // If and only if a debugger is attached, execute a breakpoint
+
+void my_fault_handler_c(sContextStateFrame *frame) 
+{  
+    coreDump.r0 = frame->r0;
+    coreDump.r1 = frame->r1;
+    coreDump.r2 = frame->r2;
+    coreDump.r3 = frame->r3;
+    coreDump.return_address = frame->return_address;
+    coreDump.stackPointer = frame->xpsr;
+    coreDump.lastBattReading = 0; // get this from a variable, not by running code
+
+// If and only if a debugger is attached, execute a breakpoint
   // instruction so we can take a look at what triggered the fault
   __asm("BKPT #0\n") ; // Break into the debugger
 
