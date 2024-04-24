@@ -48,7 +48,7 @@ int write_to_null(void) {
   *ptr_to_null  = 10;           /* tries to write to address zero */
   *ptr_unitialized = 10;    		/* tries to write ?? somewhere ?? */
 
-  return *global_ptr_to_null + *global_ptr_unitialized + 
+  return *global_ptr_to_null + *global_ptr_unitialized +
           *ptr_to_null + *ptr_unitialized;
 }
 // NOTE: You may have to set up your MPU for pointer protection
@@ -135,7 +135,7 @@ uint8_t unaligned_access_ok(void)
 void do_some_hardfaults(void)
 {
 	divide_by_zero(); 			  	// look at registers
-    write_to_null();				// null and uninitialized: fine with an MPU
+	write_to_null();				// null and uninitialized: fine with an MPU
 
 	illegal_instruction_execution(); // look at building a handler
 
@@ -233,7 +233,7 @@ void hard_fault_handler_c(unsigned long *hardfault_args){
   // Auxiliary Fault Status Register
   _AFSR = (*((volatile unsigned long *)(0xE000ED3C))) ;
 
-  // Read the Fault Address Registers. These may not contain 
+  // Read the Fault Address Registers. These may not contain
   // valid values.
   // Check BFARVALID/MMARVALID to see if they are valid values
   // MemManage Fault Address Register
@@ -273,8 +273,8 @@ void HardFault_Handler(void)
 	HARDFAULT_HANDLING_ASM();
 }
 
-// Add a coredump section in RAM that will be  placed at a 
-// particular location in RAM so when we boot, 
+// Add a coredump section in RAM that will be  placed at a
+// particular location in RAM so when we boot,
 // we can see if there is anything useful there
 //  .CoreDump :
 //  {
@@ -296,13 +296,14 @@ int32_t lastBattReading;
 // does not get optimized away
 __attribute__((optimize("O0")))
 
-void my_fault_handler_c(sContextStateFrame *frame) 
-{  
+void my_fault_handler_c(sContextStateFrame *frame)
+{
+    coreDump.key = COREDUMP_KEY;
     coreDump.r0 = frame->r0;
     coreDump.r1 = frame->r1;
     coreDump.r2 = frame->r2;
     coreDump.r3 = frame->r3;
-    coreDump.return_address = frame->return_address;
+    coreDump.returnAddress = frame->return_address;
     coreDump.stackPointer = frame->xpsr;
     coreDump.lastBattReading = 0; // get this from a variable, not by running code
 
