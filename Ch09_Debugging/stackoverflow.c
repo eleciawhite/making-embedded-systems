@@ -1,10 +1,7 @@
 /*
  * stackoverflow.c
- *
  * This file shows some ways to cause a stack overflow.
- * 
  */
-
 
 #include <stdio.h>
 #define MAX_NAME_LENGTH 10 
