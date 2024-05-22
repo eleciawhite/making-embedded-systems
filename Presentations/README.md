@@ -2,7 +2,7 @@
 
 These are public presentations related to _Making Embedded Systems, 2nd Ed._ by Elecia White.
 
-* O'Reilly's Expert Webinar: Introduction to Embedded Systems (video link soon) [slides](202405_Introduction_to_Embedded_Software\202405_Introduction_to_Embedded_Software.pdf)
+* O'Reilly's Expert Webinar: Introduction to Embedded Systems (video link soon) [slides](/202405_Introduction_to_Embedded_Software/202405_Introduction_to_Embedded_Software.pdf)
 
 * [Buried Treasures and Map Files](https://embedded.fm/blog/mapfiles) keynote at the Hackaday SuperCon 2021
 
