@@ -6,7 +6,7 @@ These are public presentations related to [_Making Embedded Systems, 2nd Ed._](h
 
 * [Buried Treasures and Map Files](https://embedded.fm/blog/mapfiles) keynote at the Hackaday SuperCon 2021
 
-* Creating Chaos and Hard Faults (video link soon) keynote at the Embedded Online Converence 2024
+* Creating Chaos and Hard Faults ([Slides](2024_Creating_Chaos_and_Hard_Faults_Public.pdf), video link soon) keynote at the Embedded Online Converence 2024.
 
 # Final Note
 
