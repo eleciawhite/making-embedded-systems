@@ -18,6 +18,7 @@ EE Basics:
  * [Combinational Logic Circuits using Logic Gates](https://www.electronics-tutorials.ws/combination/comb_1.html)
 * For learning to make boards, try out Getting to Blinky by [Contextual Electronics](https://contextualelectronics.com/), a good place for how-to electronics education
 * [ConnectorBook.com](https://connectorbook.com/) has a wealth of information about what kinds of connectors are out there. I particularly like [the connector identification tool](https://connectorbook.com/identification.html?m=NN) that lets you mouse over types of connectors to get pictures, then click down until you find the one you are looking for.
+* Handy python tool for making cables diagrams [WireViz](https://github.com/wireviz/WireViz)
 
  # Fun and  Games
   * [nand2tetris](https://www.nand2tetris.org/) is a series of lectures and projects about how to go from logic gates to software ( there is a book that is part of this as well: The Elements of Computing Systems: Building a Modern Computer from First Principles )
