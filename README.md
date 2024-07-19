@@ -49,6 +49,11 @@ Here are some of my current favorite blogs:
 * The [Embedded Software Engineering 101](https://embedded.fm/blog/ese101) blog series by Chris Svec shows getting started from a lower level system using an MSP430.
 
 Here are some C++ learning resources:
+* The best book is [C++ Primer](https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113). Whatever the latest edition is though embedded compilers may not be up on the latest C++ standards.
+
+* I also liked [Thinking in C++](https://www.amazon.com/dp/0139798099) which has some author-approved online (free) website copies. 
+
+* There is a good list for specific areas on stackoverflow's [The Definitive C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 
 * [C++ Weekly with Jason Turner](https://www.youtube.com/channel/UCxHAlbZQNFU2LgEtiqd2Maw) is a video series taught by someone who really knows C++ and loves to share it.
   
