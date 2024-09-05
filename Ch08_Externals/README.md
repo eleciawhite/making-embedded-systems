@@ -37,9 +37,9 @@ Watch the licenses though! Fonts are like code, you can't use it unless it says 
 
 
 ## Flash Memory
-* [ST AN4894 EEPROM emulation techniques and software for STM32 microcontrollers](STAN4894-eeprom-emulation-techniques-and-software-for-stm32-microcontrollers-stmicroelectronics.pdf) from [ST](https://www.st.com/resource/en/application_note/an4894-eeprom-emulation-techniques-and-software-for-stm32-microcontrollers-stmicroelectronics.pdf)
+* STM32 Application note [AN4894 EEPROM emulation techniques and software for STM32 microcontrollers](STAN4894-eeprom-emulation-techniques-and-software-for-stm32-microcontrollers-stmicroelectronics.pdf) (from [ST](https://www.st.com/resource/en/application_note/an4894-eeprom-emulation-techniques-and-software-for-stm32-microcontrollers-stmicroelectronics.pdf))
 and associated [code](https://www.st.com/en/embedded-software/x-cube-eeprom.html)
-* An good description of [how a KVStore should work from the users perspective](https://os.mbed.com/docs/mbed-os/v6.16/apis/kvstore.html) ( and [some code](https://github.com/ARMmbed/mbed-os-example-kvstore) to go with it)
+* A good description of [how a key-value or KV Store should work from the users perspective](https://os.mbed.com/docs/mbed-os/v6.16/apis/kvstore.html) (and [some code](https://github.com/ARMmbed/mbed-os-example-kvstore) to go with it)
  * Little file systems: [littlefs](https://github.com/littlefs-project/littlefs) and a [list on Wikipedia](https://en.wikipedia.org/wiki/List_of_file_systems#File_systems_optimized_for_flash_memory.2C_solid_state_media) of other file systems optimized for flash
 
 # Analog Signals
