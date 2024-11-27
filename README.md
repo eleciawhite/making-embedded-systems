@@ -15,6 +15,8 @@ Optimize your system to reduce cost and increase performance
 * Discover how to implement complex mathematics and machine learning on small processors
 * Design effective embedded systems for IoT and networked sensors
 
+You can purchase the book (physical, electronic, and audiobook versions) on [Amazon](https://www.audiobooks.com/audiobook/making-embedded-systems-design-patterns-for-great-software/814297) or whereever you buy books including [O'Reilly](https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/), [Audiobooks.com](https://www.audiobooks.com/audiobook/making-embedded-systems-design-patterns-for-great-software/814297), [ebooks.com](https://www.ebooks.com/en-us/book/211248416/making-embedded-systems/elecia-white/) and [Bookshop.org](https://bookshop.org/p/books/making-embedded-systems-design-patterns-for-great-software/20544051).
+
 # This Repository
 
 This repository is a companion to the book. While there is code in this repository, there are other resources that are critical so expect to see lots of links and some spreadsheets.
