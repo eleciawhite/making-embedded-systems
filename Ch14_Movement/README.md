@@ -16,7 +16,7 @@ For a more book-based approach to motor control and other control schemes, I lik
 Processor libraries (CMSIS has DSP, TI has extensive libariers, as does ST)
 * [ARM CMSIS DSP libary](https://arm-software.github.io/CMSIS_5/DSP/html/group__groupController.html) has PID functions for Cortex-M processors.
 
-* Microchip has some goo application notes. The concepts are not specific to their processors. 
+* Microchip has some good application notes. The concepts are not specific to their processors. 
   * [AN696 PIC18CXXX/PIC16CXXX DC Servomotor Application](http://ww1.microchip.com/downloads/en/AppNotes/00696a.pdf) describes the circuit and control for a DC motor including the control interface, measuring position, PID, motion profile, and generating the drive signal.
   * [AN857 Brushless DC Motor Control Made Easy](http://ww1.microchip.com/downloads/en/AppNotes/00857A.pdf) describes commutation without and with sensors for open and closed loop control (respectively).
 
